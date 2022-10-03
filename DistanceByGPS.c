@@ -28,7 +28,7 @@ int main(void) {
 	return 0;
 }
 
-//1도 88.804km 1분 1.480km long 경도 1초 24.668m lat위도 1초 30.887m
+// long 1sec: 24.668m lat 1sec : 30.887m (at south korea (LAT ~= 37))
 // 37.501531, 126.933596
 // 37 30 05.5 / 126 56 01.0
 // 
