@@ -2,7 +2,7 @@
 #include <math.h>
 
 double sec(double num) { 
-	return ((((num - (int)num) * 60) - (int)((num - (int)num) * 60)) * 60);
+	return ((((num - (int)num) * 60) - (int)((num - (int)num) * 60)) * 60); // degree -> sec
 	// https://mainia.tistory.com/3178
 }
 int main(void) {
@@ -13,15 +13,14 @@ int main(void) {
 	int distLat, distLong;
 	double result;
 
-	double Latsec1 = sec(LAT1); // 
+	double Latsec1 = sec(LAT1); 
 	double Latsec2 = sec(LAT2);
 	double Longsec1 = sec(LONG1);
 	double Longsec2 = sec(LONG2);
 
 	distLat = (Latsec1 - Latsec2) * 30.887; //https://blog.naver.com/jinohpark79/221170630625
-	distLong = (Longsec1 - Longsec2) * 24.668;
+	distLong = (Longsec1 - Longsec2) * 24.668; // 24.668 m/sec
 
-	printf("%d\n", distLong);
 	result = sqrt(pow(distLat, 2) + pow(distLong, 2));
 
 	printf("%f", result);
